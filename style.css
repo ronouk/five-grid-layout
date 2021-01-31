@@ -1,0 +1,274 @@
+/* Navbar Setup */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: poppins;
+    font-weight: bold;
+    color: coral;
+    padding: 20px;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.container {
+    border: 1px dotted green;
+    padding: 10px;
+    
+}
+
+/*************************
+Layout 1
+*************************/
+
+.task-1 {
+    display: grid;
+    height: 100vh;
+    background: #51ace07a;
+
+    grid-template-rows: auto 1fr auto;
+    row-gap: 24px;
+}
+
+.item {
+    background-color: white;
+    border: 5px solid tomato;
+    padding: 20px;
+}
+
+/*************************
+Layout 2
+*************************/
+
+.height-50 {
+    height: 50vh;
+}
+
+.task-2 {
+    display: grid;
+    height: 100vh;
+    background: #71e7a27a;
+
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 24px;
+    align-items: center;
+}
+
+.task-2 .item-1 {
+    grid-column-start: 2;
+    grid-column-end: 6;
+}
+
+.task-2 .item-2 {
+    grid-column: 6 / span 6;
+    /*Same as  grid column start 6 and end 12*/
+}
+
+/*************************
+Layout 3
+*************************/
+/* We will do it by two method */
+
+/* Method 1 */
+
+/* Mobile view */
+
+.task-3-1 {
+    display: grid;
+    height: 100vh;
+    background: #5ec5b77a;
+    margin-bottom: 20px;
+
+    grid-template-rows: auto auto 1fr auto auto auto;
+    gap: 24px;
+}
+
+/* Tablet view */
+
+@media (min-width: 720px) {
+
+    .task-3-1 {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto auto 1fr auto;
+    }
+
+    .task-3-1 .header {
+        grid-column: 1 / span 12;
+    }
+
+    .task-3-1 .navigation {
+        grid-column: 1 / span 12;
+    }
+
+    .task-3-1 .main {
+        grid-column: 3 / span 10;
+    }
+
+    .task-3-1 .sidebar {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+        /*To specify where the sidebar should be*/
+    }
+
+    .task-3-1 .ads {
+        grid-column: 1 / span 2;
+    }
+
+    .task-3-1 .footer {
+        grid-column: 3 / span 10;
+    }
+}
+
+/* Desktop view */
+
+@media (min-width: 1020px) {
+
+    .task-3-1 {}
+
+    .task-3-1 .header {}
+
+    .task-3-1 .navigation {
+        grid-column: 3 / span 8;
+    }
+
+    .task-3-1 .main {
+        grid-column: 3 / span 8;
+    }
+
+    .task-3-1 .sidebar {
+        grid-row: 2 / 4;
+        /*To specify where the sidebar should be*/
+    }
+
+    .task-3-1 .ads {
+        grid-column: 11 / span 2;
+        grid-row: 2/4;
+    }
+
+    .task-3-1 .footer {
+        grid-column: 1 / span 12;
+    }
+}
+
+/* Method 2 */
+
+.task-3-2{
+    display: grid;
+    height: 100vh;
+    gap: 24px;
+    background: #dd8ea27a;
+
+    grid-template-rows: auto auto 1fr auto auto auto;
+
+    grid-template-areas:
+    "header"
+    "nav"
+    'main'
+    'sidebar'
+    'ads'
+    'footer'
+}
+
+.task-3-2 .header{
+    grid-area: header;
+}
+
+.task-3-2 .navigation{
+    grid-area: nav;
+}
+
+.task-3-2 .main{
+    grid-area: main;
+}
+
+.task-3-2 .sidebar{
+    grid-area: sidebar;
+}
+
+.task-3-2 .ads{
+    grid-area: ads;
+}
+
+.task-3-2 .footer{
+    grid-area: footer;
+}
+
+/* Method 2 - Tablet view */
+
+@media (min-width: 720px){
+    .task-3-2{
+        grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    'sidebar main main'
+    'ads footer footer'
+    }
+
+    grid-template-rows: auto auto 1fr auto;
+}
+
+@media (min-width: 1020px){
+    .task-3-2{
+        grid-template-areas:
+    "header header header header"
+    "sidebar nav nav ads"
+    'sidebar main main ads'
+    'footer footer footer footer'
+    }
+
+    grid-template-rows: auto auto 1fr auto;
+}
+
+/*************************
+Layout 4
+*************************/
+
+.task-4{
+    display: grid;
+    gap: 24px;
+    background: #dac2817a;
+
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+/*************************
+Layout 5
+*************************/
+
+.task-5{
+    display: grid;
+    height: 100vh;
+    background: #ce7d657a;
+
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+
+}
+
+.task-5 .item-1{
+    grid-row: 1/span 3;
+    grid-column: 1 / span 3;
+}
+
+.task-5 .item-2{
+    grid-row: 4/span 3;
+    grid-column: 4 / span 3;
+}
+
+.task-5 .item-3{
+    grid-row: 7/span 3;
+    grid-column: 7 / span 3;
+}
+
+.task-5 .item-4{
+    grid-row: 10/span 3;
+    grid-column: 10 / span 3;
+}

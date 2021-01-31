@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five CSS Grid Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" id="layout-1">Layout 1</a></li>
+            <li><a href="#" id="layout-2">Layout 2</a></li>
+            <li><a href="#" id="layout-3">Layout 3</a></li>
+            <li><a href="#" id="layout-4">Layout 4</a></li>
+            <li><a href="#" id="layout-5">Layout 5</a></li>
+        </ul>
+    </nav>
+
+    <!-------------
+        Layout 1
+    -------------->
+
+    <div id="main-container">
+
+        <div class="task-1 container" id="layout-1-item">
+            <header class="item">Header</header>
+            <main class="item">Main</main>
+            <footer class="item">Footer</footer>
+        </div>
+
+        <!-------------
+        Layout 2
+    -------------->
+
+        <div class="task-2 container" id="layout-2-item">
+            <div class="item item-1 height-50">1</div>
+            <div class="item item-2 height-50">2</div>
+        </div>
+
+        <!-------------
+        Layout 3
+    -------------->
+        <div id="layout-3-item">
+            <div class="task-3-1 container">
+                <div class="item header">Header</div>
+                <div class="item navigation">Navigation</div>
+                <div class="item main">Main</div>
+                <div class="item sidebar">Sidebar</div>
+                <div class="item ads">Ads</div>
+                <div class="item footer">Footer</div>
+            </div>
+
+            <div class="task-3-2 container">
+                <div class="item header">Header</div>
+                <div class="item navigation">Navigation</div>
+                <div class="item main">Main</div>
+                <div class="item sidebar">Sidebar</div>
+                <div class="item ads">Ads</div>
+                <div class="item footer">Footer</div>
+            </div>
+        </div>
+
+        <!-------------
+        Layout 4
+    -------------->
+
+    <div class="task-4 container" id="layout-4-item">
+        <div class="item">Item-1</div>
+        <div class="item">Item-2</div>
+        <div class="item">Item-3</div>
+        <div class="item">Item-4</div>
+        <div class="item">Item-5</div>
+    </div>
+
+        <!-------------
+        Layout 5
+    -------------->
+
+    <div class="task-5 container" id="layout-5-item">
+        <div class="item item-1">Item-1</div>
+        <div class="item item-2">Item-2</div>
+        <div class="item item-3">Item-3</div>
+        <div class="item item-4">Item-4</div>
+    </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
